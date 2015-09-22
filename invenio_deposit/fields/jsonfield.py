@@ -47,11 +47,11 @@ def validate_schema(_form, field):
         )
     except jsonschema.SchemaError as e:
         raise wtforms.validators.ValidationError(
-            "SchemaError: {}".format(e.message)
+            "SchemaError: {0}".format(e.message)
         )
     except jsonschema.ValidationError as e:
         raise wtforms.validators.ValidationError(
-            "ValidationError: {}\nData: {}".format(e.message, field.data)
+            "ValidationError: {0}\nData: {1}".format(e.message, field.data)
         )
 
 
